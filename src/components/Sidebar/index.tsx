@@ -9,6 +9,7 @@ import {
   Search,
   Users,
 } from 'lucide-react'
+import { Input } from '../Input'
 import { Logo } from './Logo'
 import { NavItem } from './NavItem'
 import { Profile } from './Profile'
@@ -22,13 +23,12 @@ export function Sidebar() {
         <span>Untitled UI</span>
       </strong>
 
-      <div className="flex items-center space-x-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm focus-within:border-purple-300 focus-within:ring focus-within:ring-purple-100">
-        <Search className="h-5 w-5 text-zinc-500" />
-        <input
-          placeholder="Search"
-          className="flex-1 p-0 text-zinc-900 placeholder-zinc-600 outline-transparent"
-        />
-      </div>
+      <Input.Root>
+        <Input.Prefix>
+          <Search className="h-5 w-5 text-zinc-500" />
+        </Input.Prefix>
+        <Input.Control placeholder="Search" />
+      </Input.Root>
 
       <nav className="space-y-1">
         <NavItem title="Home" href="/" icon={Home} current />
