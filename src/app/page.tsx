@@ -150,6 +150,21 @@ export default function Home() {
 
             <div />
           </div>
+
+          <div className="flex items-center justify-end gap-2 py-5">
+            <button
+              className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm transition-colors duration-200 enabled:hover:bg-zinc-50"
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors duration-200 enabled:hover:bg-violet-700"
+            >
+              Save
+            </button>
+          </div>
         </form>
       </div>
     </>
