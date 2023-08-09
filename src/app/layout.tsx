@@ -1,6 +1,6 @@
+import { Sidebar } from '@/components/Sidebar'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Image from 'next/image'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,9 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} grid min-h-screen grid-cols-app`}>
-        <aside className="border-r border-zinc-200 px-4 py-8">
-          <Image src="/logo.svg" width={142} height={32} alt="" />
-        </aside>
+        <Sidebar />
         <main className="px-4 md:p-8">{children}</main>
       </body>
     </html>
