@@ -76,6 +76,80 @@ export default function Home() {
               />
             </Input.Root>
           </div>
+
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label
+              htmlFor="photo"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Your photo
+              <span className="mt-0.5 block text-sm font-normal text-zinc-500">
+                This will be displayed on your profile.
+              </span>
+            </label>
+
+            <div />
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label
+              htmlFor="role"
+              className="text-sm font-medium text-zinc-700 "
+            >
+              Role
+            </label>
+
+            <Input.Root>
+              <Input.Control defaultValue="Sr. fullstack developer" id="role" />
+            </Input.Root>
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label
+              htmlFor="country"
+              className="text-sm font-medium text-zinc-700 "
+            >
+              Country
+            </label>
+
+            <div />
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label
+              htmlFor="timezone"
+              className="text-sm font-medium text-zinc-700 "
+            >
+              Timezone
+            </label>
+
+            <div />
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
+              Bio
+              <span className="mt-0.5 block text-sm font-normal text-zinc-500">
+                Write a short introduction.
+              </span>
+            </label>
+
+            <div />
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label
+              htmlFor="portfolio"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Portfolio projects
+              <span className="mt-0.5 block text-sm font-normal text-zinc-500">
+                Share a few snippets of your work.
+              </span>
+            </label>
+
+            <div />
+          </div>
         </form>
       </div>
     </>
