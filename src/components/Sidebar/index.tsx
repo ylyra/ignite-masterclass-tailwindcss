@@ -1,9 +1,10 @@
 import { Search } from 'lucide-react'
 import { Logo } from './Logo'
+import { MainNavigation } from './MainNavigation'
 
 export function Sidebar() {
   return (
-    <aside className="flex flex-col space-y-6 border-r border-zinc-200 px-4 py-8">
+    <aside className="space-y-6 border-r border-zinc-200 px-4 py-8">
       <strong className="flex items-center space-x-2 font-mono text-xl font-semibold text-zinc-900">
         <Logo />
         <span>Untitled UI</span>
@@ -16,6 +17,8 @@ export function Sidebar() {
           className="flex-1 p-0 text-zinc-900 placeholder-zinc-600 outline-transparent"
         />
       </div>
+
+      <MainNavigation />
     </aside>
   )
 }
