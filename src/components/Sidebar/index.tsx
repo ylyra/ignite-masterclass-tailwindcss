@@ -1,10 +1,19 @@
-import { Search } from 'lucide-react'
+import {
+  CheckSquare,
+  Flag,
+  Home,
+  Kanban,
+  Layers,
+  LifeBuoy,
+  Search,
+  Users,
+} from 'lucide-react'
 import { Logo } from './Logo'
-import { MainNavigation } from './MainNavigation'
+import { NavItem } from './NavItem'
 
 export function Sidebar() {
   return (
-    <aside className="space-y-6 border-r border-zinc-200 px-4 py-8">
+    <aside className="flex flex-col gap-6 border-r border-zinc-200 px-4 py-8">
       <strong className="flex items-center space-x-2 font-mono text-xl font-semibold text-zinc-900">
         <Logo />
         <span>Untitled UI</span>
@@ -18,7 +27,20 @@ export function Sidebar() {
         />
       </div>
 
-      <MainNavigation />
+      <nav className="space-y-1">
+        <NavItem title="Home" href="/" icon={Home} />
+        <NavItem title="Dashboard" href="/dashboard" icon={Kanban} />
+        <NavItem title="Projects" href="/projects" icon={Layers} />
+        <NavItem title="Tasks" href="/tasks" icon={CheckSquare} />
+        <NavItem title="Reporting" href="/reporting" icon={Flag} />
+        <NavItem title="Users" href="/users" icon={Users} />
+      </nav>
+
+      <div className="mt-auto flex flex-col gap-6">
+        <nav className="space-y-1">
+          <NavItem title="Support" href="/support" icon={LifeBuoy} />
+        </nav>
+      </div>
     </aside>
   )
 }
