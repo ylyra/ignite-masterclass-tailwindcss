@@ -1,5 +1,6 @@
 import {
   CheckSquare,
+  Cog,
   Flag,
   Home,
   Kanban,
@@ -10,10 +11,11 @@ import {
 } from 'lucide-react'
 import { Logo } from './Logo'
 import { NavItem } from './NavItem'
+import { UsedSpaceWidget } from './UsedSpaceWidget'
 
 export function Sidebar() {
   return (
-    <aside className="flex flex-col gap-6 border-r border-zinc-200 px-4 py-8">
+    <aside className="flex flex-col gap-6 border-r border-zinc-200 px-4 py-8 md:min-h-screen">
       <strong className="flex items-center space-x-2 font-mono text-xl font-semibold text-zinc-900">
         <Logo />
         <span>Untitled UI</span>
@@ -28,7 +30,7 @@ export function Sidebar() {
       </div>
 
       <nav className="space-y-1">
-        <NavItem title="Home" href="/" icon={Home} />
+        <NavItem title="Home" href="/" icon={Home} current />
         <NavItem title="Dashboard" href="/dashboard" icon={Kanban} />
         <NavItem title="Projects" href="/projects" icon={Layers} />
         <NavItem title="Tasks" href="/tasks" icon={CheckSquare} />
@@ -39,7 +41,10 @@ export function Sidebar() {
       <div className="mt-auto flex flex-col gap-6">
         <nav className="space-y-1">
           <NavItem title="Support" href="/support" icon={LifeBuoy} />
+          <NavItem title="Settings" href="/settings" icon={Cog} />
         </nav>
+
+        <UsedSpaceWidget />
       </div>
     </aside>
   )
