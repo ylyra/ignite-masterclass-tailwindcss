@@ -1,15 +1,15 @@
 import {
-  CheckSquare,
-  Cog,
-  Flag,
-  Home,
-  Kanban,
-  Layers,
-  LifeBuoy,
-  Search,
-  Users,
+    CheckSquare,
+    Cog,
+    Flag,
+    Home,
+    Kanban,
+    Layers,
+    LifeBuoy,
+    Search,
+    Users,
 } from 'lucide-react'
-import { Input } from '../Input'
+import { Input } from '../Form/Input'
 import { Logo } from './Logo'
 import { NavItem } from './NavItem'
 import { Profile } from './Profile'
