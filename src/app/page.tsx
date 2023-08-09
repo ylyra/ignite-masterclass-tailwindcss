@@ -156,7 +156,7 @@ export default function Home() {
 
             <FileInput.Root>
               <FileInput.Trigger>
-                <FileInput.Control />
+                <FileInput.Control id="portfolio" multiple />
               </FileInput.Trigger>
             </FileInput.Root>
           </div>
