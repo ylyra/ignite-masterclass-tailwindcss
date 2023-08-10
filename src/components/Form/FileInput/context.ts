@@ -4,7 +4,7 @@ type FileInputContextType = {
   id: string
   files: File[]
 
-  onFilesSelected: (files: File[]) => void
+  onFilesSelected: (files: File[], multiple: boolean) => void
 }
 
 export const FileInputContext = createContext({} as FileInputContextType)
