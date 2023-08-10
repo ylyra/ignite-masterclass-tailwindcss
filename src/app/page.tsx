@@ -1,4 +1,4 @@
-import { FileInput } from '@/components/Form/FileInput'
+import * as FileInput from '@/components/Form/FileInput'
 import { Input } from '@/components/Form/Input'
 import { SettingsTabs } from '@/components/SettingsTabs'
 import { Mail } from 'lucide-react'

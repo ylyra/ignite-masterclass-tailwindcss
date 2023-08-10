@@ -3,9 +3,4 @@ import { ImagePreview } from './ImagePreview'
 import { Root } from './Root'
 import { Trigger } from './Trigger'
 
-export const FileInput = Object.assign(Root, {
-  Root,
-  Control,
-  ImagePreview,
-  Trigger,
-})
+export { Control, ImagePreview, Root, Trigger }
