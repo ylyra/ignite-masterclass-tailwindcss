@@ -3,9 +3,11 @@
 import { ComponentPropsWithoutRef, useId, useState } from 'react'
 import { FileInputContext } from './context'
 
-type RootProps = ComponentPropsWithoutRef<'div'>
+type RootProps = ComponentPropsWithoutRef<'div'> & {
+  multiple?: boolean
+}
 
-export function Root(props: RootProps) {
+export function Root({ multiple = false, ...props }: RootProps) {
   const id = useId()
   const [files, setFiles] = useState<File[]>([])
 
@@ -22,6 +24,7 @@ export function Root(props: RootProps) {
       value={{
         id,
         files,
+        multiple,
 
         onFilesSelected,
       }}

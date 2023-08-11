@@ -14,14 +14,13 @@ export function NavItem({ href, icon: Icon, title, current }: NavItemProps) {
     <Link
       key={href}
       href={href}
-      className="group flex items-center space-x-3 rounded-md px-3 py-2 transition-colors duration-200 hover:bg-purple-50 data-[state=active]:bg-purple-50"
-      data-state={current ? 'active' : 'inactive'}
+      className="group flex items-center gap-3 rounded px-3 py-2 outline-none hover:bg-violet-50 focus-visible:ring-2 focus-visible:ring-violet-500 dark:hover:bg-zinc-800"
     >
-      <Icon />
-      <span className="font-medium text-zinc-700 transition-colors duration-200 group-hover:text-violet-700 group-data-[state=active]:text-violet-700">
+      <Icon className="h-5 w-5 flex-shrink-0 text-zinc-500" />
+      <span className="font-medium text-zinc-700 group-hover:text-violet-500 dark:text-zinc-100 dark:group-hover:text-violet-300">
         {title}
       </span>
-      <ChevronDown className="!ml-auto h-5 w-5 text-zinc-400 transition-all duration-200 group-hover:text-violet-400 group-data-[state=active]:rotate-180 group-data-[state=active]:text-violet-400" />
+      <ChevronDown className="!ml-auto h-5 w-5 text-zinc-400 dark:text-zinc-600" />
     </Link>
   )
 }

@@ -4,6 +4,8 @@ type FileInputContextType = {
   id: string
   files: File[]
 
+  multiple: boolean
+
   onFilesSelected: (files: File[], multiple: boolean) => void
 }
 

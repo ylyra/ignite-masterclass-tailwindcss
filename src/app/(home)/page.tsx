@@ -1,9 +1,11 @@
+import { Button } from '@/components/Button'
 import * as FileInput from '@/components/Form/FileInput'
 import { Input } from '@/components/Form/Input'
 import * as Select from '@/components/Form/Select'
-import { SettingsTabs } from '@/components/SettingsTabs'
-import { Mail } from 'lucide-react'
+import { Textarea } from '@/components/Form/TextArea'
+import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 import { CountrySelect } from './CountrySelect'
+import { SettingsTabs } from './SettingsTabs'
 
 export default function Home() {
   return (
@@ -155,7 +157,49 @@ export default function Home() {
               </span>
             </label>
 
-            <div />
+            <div className="flex flex-col gap-3">
+              <div className="grid gap-3 lg:grid-cols-2">
+                <Select.Root defaultValue="normal">
+                  <Select.Trigger>
+                    <Select.Value />
+                  </Select.Trigger>
+
+                  <Select.Content>
+                    <Select.Item value="normal">
+                      <Select.ItemText>Normal text</Select.ItemText>
+                    </Select.Item>
+                    <Select.Item value="md">
+                      <Select.ItemText>Markdown</Select.ItemText>
+                    </Select.Item>
+                  </Select.Content>
+                </Select.Root>
+                <div className="flex items-center gap-1">
+                  <Button variant="ghost">
+                    <Bold className="h-4 w-4 text-zinc-400" strokeWidth={3} />
+                  </Button>
+                  <Button variant="ghost">
+                    <Italic className="h-4 w-4 text-zinc-400" strokeWidth={3} />
+                  </Button>
+                  <Button variant="ghost">
+                    <Link className="h-4 w-4 text-zinc-400" strokeWidth={3} />
+                  </Button>
+                  <Button variant="ghost">
+                    <List className="h-4 w-4 text-zinc-400" strokeWidth={3} />
+                  </Button>
+                  <Button variant="ghost">
+                    <ListOrdered
+                      className="h-4 w-4 text-zinc-400"
+                      strokeWidth={3}
+                    />
+                  </Button>
+                </div>
+              </div>
+              <Textarea
+                name="bio"
+                id="bio"
+                defaultValue="I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development."
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">

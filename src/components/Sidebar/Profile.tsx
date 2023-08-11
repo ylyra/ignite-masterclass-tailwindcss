@@ -1,4 +1,5 @@
 import { LogOut } from 'lucide-react'
+import { Button } from '../Button'
 
 /* eslint-disable @next/next/no-img-element */
 export function Profile() {
@@ -10,17 +11,16 @@ export function Profile() {
         className="h-10 w-10 rounded-full"
       />
       <div className="flex flex-1 flex-col truncate">
-        <span className="text-sm font-semibold text-zinc-700">Yan Lyra</span>
-        <small className="truncate text-sm text-zinc-500">
+        <span className="block text-sm font-semibold text-zinc-700 dark:text-zinc-100">
+          Yan Lyra
+        </span>
+        <small className="block truncate text-sm text-zinc-500 dark:text-zinc-400">
           yan.lyra@growth.sale
         </small>
       </div>
-      <button
-        type="button"
-        className="group ml-auto rounded-md p-2 transition-colors duration-200 hover:bg-violet-50"
-      >
-        <LogOut className="h-4 w-4 text-zinc-500 transition-colors duration-200 group-hover:text-zinc-800" />
-      </button>
+      <Button variant="ghost" type="button">
+        <LogOut className="h-5 w-5 text-zinc-500 dark:text-zinc-400" />
+      </Button>
     </div>
   )
 }
