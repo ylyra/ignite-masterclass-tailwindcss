@@ -9,7 +9,7 @@ interface NavItemProps {
   current?: boolean
 }
 
-export function NavItem({ href, icon: Icon, title, current }: NavItemProps) {
+export function NavItem({ href, icon: Icon, title }: NavItemProps) {
   return (
     <Link
       key={href}
